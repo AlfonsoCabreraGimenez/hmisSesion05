@@ -52,6 +52,12 @@ public class Ejercicio02Test {
 		assertFalse(resultado);
 	}
 	
+	@Test
+	public void comprobarbaseDatosFalseTestApellido(){
+		boolean resultado = ejercicio2.compruebaLoginEnBD("user", "pass1");
+		assertFalse(resultado);
+	}
+	
 	/*@Test
 	public void comprobarBBDDTest(){
 		boolean resultado = ejercicio2.compruebaLoginEnBD("user", "pass");
