@@ -1,14 +1,16 @@
 package ual.hmis.sesion05.ejercicio07;
 
+import static org.junit.Assert.*;
+
 import java.util.Arrays;
 import java.util.Collection;
 
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import ual.hmis.sesion05.ejercicio01.Ejercicio1;
 import ual.hmis.sesion05.ejercicio02.Ejercicio2;
 
 @RunWith(Parameterized.class)
@@ -26,15 +28,15 @@ public class Ejercicio072Test {
 	}
 	
 	@Parameters
-	public static Collection<Object[]> data(){
+	public static Collection data(){
 		return Arrays.asList(new Object[][] {
-			{null,"Cabrera"},
-			{"Alfonso",null},
-			{"Alfonso","CabreraGimenezPulidoCano"},
-			{"Alfonso","Cabrera"},
-			{"user","pass"},
-			{"user1","pass"},
-			{"user", "pass1"}
+			{null,"Cabrera",false},
+			{"Alfonso",null,false},
+			{"Alfonso","CabreraGimenezPulidoCano",false},
+			{"Alfonso","Cabrera",false},
+			{"user","pass",true},
+			{"user1","pass",false},
+			{"user", "pass1",false}
 		});
 	}
 
@@ -43,8 +45,8 @@ public class Ejercicio072Test {
 	public void setUp() {
 		e2 = new Ejercicio2();
 		}
-	
+	@Test
 	public void Ejercicio072Test() {
-		
+	
 	}
 }
