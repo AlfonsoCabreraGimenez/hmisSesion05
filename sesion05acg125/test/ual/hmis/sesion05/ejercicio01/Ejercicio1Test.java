@@ -33,4 +33,13 @@ public class Ejercicio1Test {
 		assertEquals(1,resultado);
 	}
 	
+	@Test
+	public void testDivisoresporTodos(){
+		int resultado = 0;
+		
+		resultado = ejercicio1.transformar(30);
+		
+		assertEquals(1,resultado);
+	}
+	
 }
