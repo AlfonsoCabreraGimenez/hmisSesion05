@@ -11,40 +11,39 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import ual.hmis.sesion05.ejercicio03.*;
+import ual.hmis.sesion05.ejercicio04.Ejercicio4;
 
 @RunWith(Parameterized.class)
-public class Ejercicio073Test {
+public class Ejercicio074Test {
 	
-	private int numero;
+	private String cond1;
+	private String cond2;
 	private String salida;
-	private Ejercicio3 e3;
+	private Ejercicio4 e4;
 	
-	public Ejercicio073Test(int entrada, String esperado) {
-		this.numero = entrada;
-		this.salida = esperado;
+	public Ejercicio074Test(String condicion, String condicion2, String salidas) {
+		this.cond1=condicion;
+		this.cond2 = condicion2;
+		this.salida=salidas;
 	}
 	
 	@Parameters
 	public static Collection data(){
 		return Arrays.asList(new Object[][] {
-			{-1,"numero erroneo"},
-			{4,"****"}
+			{"Alfonso","Alfredo","ns"},
+			{"Pedro","Maria","Pedo"},
+			{"alfonso","maria","lfonso"}
 		});
 	}
 	
 	@Before
 	public void setUp() {
-		e3 = new Ejercicio3();
+		e4 = new Ejercicio4();
 	}
 	
 	@Test
-	public void Ejercicio073() {
-		System.out.println("Addition with parameters : " + numero + " and " + salida);
-		assertEquals(e3.transformar(numero), salida);
-		
-		
+	public void Ejercicio074() {
+		assertEquals(e4.compararCadenas(cond1, cond2), salida);
 	}
-	
 
 }

@@ -45,8 +45,9 @@ public class Ejercicio072Test {
 	public void setUp() {
 		e2 = new Ejercicio2();
 		}
+	
 	@Test
 	public void Ejercicio072Test() {
-	
+		assertEquals(e2.login(s1, s2), expected);
 	}
 }
