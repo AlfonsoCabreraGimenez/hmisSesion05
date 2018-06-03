@@ -45,7 +45,7 @@ public class Ejercicio06 {
 		list2.add(actividad1);
 		list2.add(actividad);
 		a.setActividadesAsignadas(list2);
-		
-		assertEquals(8.0,a.calcularNotaActividad("tarea"));
+		double numero = 8.0;
+		assertTrue(numero == a.calcularNotaActividad("tarea"));
 	}
 }
