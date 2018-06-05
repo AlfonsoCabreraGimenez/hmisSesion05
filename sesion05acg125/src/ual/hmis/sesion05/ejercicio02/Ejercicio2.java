@@ -18,7 +18,7 @@ public class Ejercicio2 {
 		int longitud = 0;
 		longitud = (username.length() + password.length());
 		
-		if(longitud > 29){
+		if(longitud > 30){
 			return false;
 		} else {
 		
