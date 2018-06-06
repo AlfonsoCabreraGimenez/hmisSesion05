@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-public class Ejercicio06 {
+public class Ejercicio06Test {
 
 	@Test
 	public void testCalcularNotaActividad() {
